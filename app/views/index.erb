@@ -1,0 +1,5 @@
+<h2>Cat Stories</h2>
+<%@articles.all.each do |article| %>
+    <h3><%=article.title%></h3>
+    <p><%=article.content%></p><br><br>
+    <%end%>
