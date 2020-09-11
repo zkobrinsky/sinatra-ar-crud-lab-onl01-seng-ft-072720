@@ -1,8 +1,7 @@
 <h2>Edit an article</h2>
-<%binding.pry%>
-<form method="POST" action="/articles/:id">
-    <p>Title: <input type="text" name="title" value=""</p>
-    <p>Content: <input type="text" name="content"</p><br><br>
+<form method="POST" action="/articles/<%=params[:id]%>">
     <input id="hidden" type="hidden" name="_method" value="PATCH">
+    <p>Title: <input type="text" name="title" value="<%=@article.title%>"</p>
+    <p>Content: <input type="text" name="content" value="<%=@article.content%>"></p><br><br>
     <input type="submit" value="submit">
 </form>
